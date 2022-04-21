@@ -1,0 +1,34 @@
+{
+  "name": "nodejs-mongodb-crud",
+  "version": "1.0.0",
+  "description": "crud task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kartien/Nodejs_Mongodb_CRUD.git"
+  },
+  "keywords": [],
+  "author": "kartien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kartien/Nodejs_Mongodb_CRUD/issues"
+  },
+  "homepage": "https://github.com/kartien/Nodejs_Mongodb_CRUD#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.5",
+    "mongoose": "^6.3.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "nodemon": "^2.0.15"
+  }
+}
