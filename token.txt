@@ -1,6 +1,0 @@
-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
-
-
-
-
-"start": "babel-node src/index.js"

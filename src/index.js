@@ -1,11 +1,13 @@
 import express from "express";
-import indexRoutes from "./routes/index.routes"
+
+const app = express()
 
 
-const app = express();
+app.listen(3000)
 
-app.use(indexRoutes)
+app.get('/', (req, res) => {
+    res.send('Hello world')
+})
 
-app.listen(3000);
+console.log("Server on port", 3000)
 
-console.log("Sever on port", 3000);
