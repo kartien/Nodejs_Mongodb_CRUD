@@ -32,7 +32,7 @@
     "@babel/preset-env": "^7.18.2",
     "nodemon": "^2.0.16",
     "devDependencies": {
-    "got": ">=11.8.5"
+    "got": "11.8.5"
 }
   }
 }
