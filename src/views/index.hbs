@@ -16,4 +16,12 @@
 
 </form>
 
-
+<ul>
+    {{#each tasks}}
+    <li>{{title}}
+    <p>{{description}}</p>
+    <button>Edit</button>
+    <button>Delete</button>
+    </li>
+    {{/each}}
+</ul>
