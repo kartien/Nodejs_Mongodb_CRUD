@@ -30,8 +30,24 @@ router.get('/about', (req, res) => {
     res.render('about', {message: 'About'});
 })
 
-router.get('/edit', (req, res) => {
-    res.render('edit', {message: 'Edit'});
+router.get('/edit/:id', async (req, res) => {
+    
+    try {
+        const task =  await Task.findById(req.params.id).lean()
+    
+        res.render('edit', {task: task});
+    } catch (err) {
+        console.log(err.message)
+    }
+})
+
+router.post('/edit/:id', async (req, res) => {
+     
+    const {id} = req.params;
+
+    await  Task.findByIdAndUpdate(id, req.body)
+    
+    res.redirect('/')
 })
 
 
