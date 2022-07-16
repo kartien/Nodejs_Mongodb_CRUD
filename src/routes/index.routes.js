@@ -1,76 +1,33 @@
-import { Router } from 'express'
-import Task from '../models/Task'
+import { Router } from "express";
 
-const router = Router()
+// Controllers
+import {
+  renderTask,
+  createTask,
+  renderTaskEdit,
+  editTask,
+  deleteTask,
+  doneTask,
+} from "../controllers/taks.controller";
 
+const router = Router();
 
-router.get('/', async (req, res) => {
-    
-    const tasks = await Task.find().lean();
-    
-    
-    res.render('index', {tasks: tasks});
+// Routes
+router.get("/", renderTask);
 
-})
+router.post("/tasks/add", createTask);
 
-router.post('/tasks/add', async (req, res) => {
-   try {
-     
-    const task =  Task(req.body)  
+router.get("/tasks/:id/edit", renderTaskEdit);
 
-    await task.save()
-    res.redirect('/')
-   }catch (err) {
-    console.log(err)
-   }
-   
-})
+router.post("/tasks/:id/edit", editTask);
 
-router.get('/about', (req, res) => {
-    res.render('about', {message: 'About'});
-})
+router.get("/delete/:id", deleteTask);
 
-router.get('/edit/:id', async (req, res) => {
-    
-    try {
-        const task =  await Task.findById(req.params.id).lean()
-    
-        res.render('edit', {task: task});
-    } catch (err) {
-        console.log(err.message)
-    }
-})
+router.get("/toggleDone/:id", doneTask);
 
-router.post('/edit/:id', async (req, res) => {
-     
-    const {id} = req.params;
-
-    await  Task.findByIdAndUpdate(id, req.body)
-    
-    res.redirect('/')
-})
-
-router.get('/delete/:id', async (req, res) => {
-    const {id} = req.params;
-    await Task.findByIdAndDelete(id)
-
-    res.redirect("/");
-
+// About
+router.get("/about", (req, res) => {
+  res.render("about", { message: "About" });
 });
-
-router.get('/toggleDone/:id', async (req, res) => {
-
-    const {id} = req.params;
-
-    const task =  await Task.findById(id)
-
-    task.done = !task.done;
-
-    await task.save();
-
-    res.redirect("/");
-
-})
-
 
 export default router;
