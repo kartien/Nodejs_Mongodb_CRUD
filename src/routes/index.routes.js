@@ -21,9 +21,9 @@ router.get("/tasks/:id/edit", renderTaskEdit);
 
 router.post("/tasks/:id/edit", editTask);
 
-router.get("/delete/:id", deleteTask);
+router.get("/tasks/:id/delete", deleteTask);
 
-router.get("/toggleDone/:id", doneTask);
+router.get("/tasks/:id/toggleDone", doneTask);
 
 // About
 router.get("/about", (req, res) => {
