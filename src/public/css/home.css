@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+
+a,
+a,:focus,
+a,:hover{
+    color: orange;
+    text-decoration: node;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus{
+    color: #333;
+    text-decoration: none;
+    background-color: #FFA500;
+    border: 1px solid #FFA500;
+}
+
+body{
+    height: 100%;
+    background-color: #333;
+}
+
+body{
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgb(0, 0, 0, .5);
+}
+
+.menu{
+    padding-top: 100px;
+    color: #fff;
+    font-family: 'Dosis', sans-serif;
+}
+
+

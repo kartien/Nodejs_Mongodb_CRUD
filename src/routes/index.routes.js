@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { application, Router } from "express";
 
 // Controllers
 import {
@@ -8,6 +8,7 @@ import {
   editTask,
   deleteTask,
   doneTask,
+  getTasks,
 } from "../controllers/taks.controller";
 
 const router = Router();
@@ -25,9 +26,10 @@ router.get("/tasks/:id/delete", deleteTask);
 
 router.get("/tasks/:id/toggleDone", doneTask);
 
-// About
-router.get("/about", (req, res) => {
-  res.render("about", { message: "About" });
-});
+// tasks
+/*router.get("/tasks", (req, res) => {
+  res.render("tasks")
+})*/
+router.get("/tasks", getTasks);
 
 export default router;
