@@ -1,5 +1,10 @@
-<body>
-    {{> tasks/taskForm}}
 
-    {{> tasks/taskTable}}
-</body>
+{{> tasks/taskForm}}
+
+<div class="container content">
+    <div class="center block">
+        <div class="col-md-8 mx-auto">
+            {{> tasks/taskTable}}
+        </div>
+    </div>
+</div>

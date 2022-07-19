@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true}));
 //Routes 
 app.use(indexRoutes);
 
-//Styles 
+// static files
 app.use(express.static(__dirname + '/public'));
 
 export default app;
