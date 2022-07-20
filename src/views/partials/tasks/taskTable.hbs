@@ -1,4 +1,5 @@
-
+<body>
+<link rel="stylesheet" href="css/title.css">
 {{#if tasks}}
 <table class="table table-bordered table-hover table-dark">
     <thead>
@@ -30,11 +31,13 @@
     </tbody>
 </table>
  {{else}}
-     <div class="text-center text-black">
-        <h1>No Tasks</h1>
+    <div class="text-center text-black wrapper">
+        <div class="typing-demo">
+           You currently have no tasks
+        </div>
     </div>
     <div class="col-md-8">
         <img class="image" src="img/404.jpg">
     </div>
-   
 {{/if}}
+</body>

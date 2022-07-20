@@ -30,4 +30,5 @@ app.use(indexRoutes);
 // static files
 app.use(express.static(__dirname + '/public'));
 
+
 export default app;
