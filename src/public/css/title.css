@@ -1,6 +1,7 @@
 .wrapper {
    
     /*This part is important for centering*/
+    padding-top: 20px;
     display: grid;
     place-items: center;
   }
@@ -12,7 +13,7 @@
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
-    font-size: 2em;
+    font-size: 1.5em;
   }
   
   @keyframes typing {

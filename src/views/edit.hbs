@@ -1,18 +1,30 @@
-<body>
-    
-<form action="/tasks/{{task._id}}/edit" method="post">
 
-    <input type="text" name="title" placeholder="Title" value="{{task.title}}">
 
-    <textarea 
-    name="description"
-    cols="3" 
-    placeholder="Add description"
-    
-    >{{task.description}}</textarea>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body bg-dark p-4 text-white rounded-0">
+        <h1>Update Task</h1>
+        <form action="/tasks/{{task._id}}/edit" method="post">
+          <input 
+            type="text" 
+            name="title" 
+            placeholder="Title" 
+            value="{{task.title}}"
+            class="form-control rounded-0 bg-dark text-white" 
+          >
 
-    <button>Update</button>
+          <textarea 
+            name="description" 
+            rows="3"
+            class="form-control rounded-0 bg-dark text-white" 
+            placeholder="Add description"
+            >{{task.description}}</textarea>
 
-</form>
+          <button class="btn btn-primary">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
-</body>
+</div>
