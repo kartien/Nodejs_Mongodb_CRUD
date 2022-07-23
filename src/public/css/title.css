@@ -27,3 +27,14 @@
       border-color: transparent
     }
   }
+
+.image{
+  padding-top: 20px;
+  display: grid;
+  place-items: center;
+}
+
+img{
+  width: 120px;
+  height: 120px;
+}
