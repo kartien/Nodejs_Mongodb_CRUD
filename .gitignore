@@ -1,5 +1,8 @@
+#node dependencies
 node_modules 
-.vscode 
+
+# environment variables
 .env 
-dockerfile
-dist
+
+# build folder
+.dist
